@@ -2,12 +2,13 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: "jit",
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './apps/whats-app/src/**/*.{html,ts}',
-    ]
-  },
+  // purge: {
+  //   enabled: process.env.NODE_ENV === 'production',
+    
+  // },
+  content: [
+    './apps/whats-app/src/**/*.{html,ts}',
+  ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
