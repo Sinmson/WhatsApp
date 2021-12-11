@@ -5,6 +5,7 @@
 <!-- <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p> -->
 
 This project is a (frontend) replica of [WhatsApp (Web)](https://web.whatsapp.com)
+The chat functionality will be implemented with Firebase and does not work with WhatsApp.
 
 - [WhatsApp](#whatsapp)
   - [Why](#why)
@@ -153,6 +154,7 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
 ## Quick Start
 
 ### Requirements
+If you want to run it in a DevContainer:
 - [VSCode](https://code.visualstudio.com)
 - [Docker](https://www.docker.com)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
