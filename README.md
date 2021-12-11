@@ -4,7 +4,7 @@
 
 <!-- <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p> -->
 
-This project is a replica of [WhatsApp (Web)](https://web.whatsapp.com)
+This project is a (frontend) replica of [WhatsApp (Web)](https://web.whatsapp.com)
 
 - [WhatsApp](#whatsapp)
   - [Why](#why)
@@ -18,7 +18,9 @@ This project is a replica of [WhatsApp (Web)](https://web.whatsapp.com)
     - [Installation](#installation)
     - [Development server](#development-server)
     - [Build](#build)
+  - [TODOs](#todos)
   - [Dokumentation](#dokumentation)
+  - [Legal](#legal)
 
 ## Why
 
@@ -173,6 +175,16 @@ Run `npm run frontend` for a dev server. Navigate to http://localhost:4200/. The
 
 Run `npm run ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## TODOs
+
+- [ ] Create Docker container with nginx server
+- [ ] Build backend with firebase
+- [ ] Connect to backend
+- [ ] Move Code into components
+
 ## Dokumentation
 
 Wil be added...
+
+## Legal
+This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by WhatsApp or any of its affiliates or subsidiaries. This is an independent and unofficial software. Use at your own risk.
