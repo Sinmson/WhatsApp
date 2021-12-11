@@ -1,105 +1,178 @@
 
 
-# Test
+# WhatsApp
 
-This project was generated using [Nx](https://nx.dev).
+<!-- <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p> -->
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+This project is a replica of [WhatsApp (Web)](https://web.whatsapp.com)
 
-🔎 **Smart, Extensible Build Framework**
+- [WhatsApp](#whatsapp)
+  - [Why](#why)
+  - [Technology Stack](#technology-stack)
+    - [In used](#in-used)
+    - [Want to use](#want-to-use)
+  - [Functionalities](#functionalities)
+    - [UI](#ui)
+  - [Quick Start](#quick-start)
+    - [Requirements](#requirements)
+    - [Installation](#installation)
+    - [Development server](#development-server)
+    - [Build](#build)
+  - [Dokumentation](#dokumentation)
 
-## Quick Start & Documentation
+## Why
 
-[Nx Documentation](https://nx.dev/angular)
+I rebuild WhatsApp Web as a challenge and to keep up to date with current technologies. 
 
-[10-minute video showing all Nx features](https://nx.dev/getting-started/intro)
+## Technology Stack
 
-[Interactive Tutorial](https://nx.dev/tutorial/01-create-application)
-
-## Adding capabilities to your workspace
-
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
-
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
-
-Below are our core plugins:
-
+### In used
+- [Nx](https://nx.dev) 
+- [Firebase](https://firebase.google.com)
 - [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+- [Tailwind](https://tailwindcss.com/docs/transition-duration)
+- [cypress](https://www.cypress.io/)
+- [jest](https://jestjs.io/)
 
-There are also many [community plugins](https://nx.dev/community) you could add.
 
-## Generate an application
-
-Run `ng g @nrwl/angular:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@test/mylib`.
-
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+### Want to use
+- [Storybook](https://storybook.js.org)
+- [Swagger](https://swagger.io)
+- [CompoDoc](https://compodoc.app)
+- [Bit](https://bit.dev/)
+- [RxJs](https://www.learnrxjs.io/)
+- [NgMocks](https://ng-mocks.sudo.eu)
+- [BigHeads](https://github.com/RobertBroersma/bigheads)
+- [faker.js](https://github.com/marak/Faker.js)
 
 
 
+## Functionalities 
+
+### UI
+- [x] Responsive
+- [ ] Translation
+- [ ] Loading page
+- [ ] Logged out
+- [ ] Own profile bar with
+  - [x] Profile picture
+  - [x] Name
+  - [x] Status button
+  - [x] New message button
+  - [ ] Settings
+    - [x] Button
+    - [ ] Context menu
+- [x] Chats with
+  - [x] Search bar 
+  - [x] Profile picture 
+  - [x] Name
+  - [x] Last message
+  - [x] Last message time
+  - [ ] Context menu
+  - [x] Scrollable
+- [ ] Without selected chat
+- [ ] Chat with
+  - [x] Partner with
+    - [x] Profile picture 
+    - [x] Name
+    - [x] Last online state
+    - [ ] Search BuTTON
+    - [ ] Settings
+      - [ ] Button
+      - [ ] ContextMenu
+  - [ ] Messages
+    - [x] Scrollable
+    - [x] In different colors
+    - [ ] Expandable when truncated 
+  - [x] Message bar with
+    - [ ] Smileys / gifs / stickers
+      - [x] Buttons
+      - [ ] Smileys PopUp
+      - [ ] Gifs PopUp
+      - [ ] Stickers PopUp
+    - [x] Media
+    - [x] Input box
+    - [x] Microphone
+- [ ] Sidemenu (right) for
+  - [ ] Message search in active Chat
+  - [ ] Contact information
+- [ ] Sidemenu (left) for
+  - [ ] Creating a group
+  - [ ] See marked (star) messages
+  - [ ] Settings with
+    - [ ] Profile picture name and info
+      - [ ] Preview
+      - [ ] Editable
+    - [ ] Notifications
+      - [ ] Button
+      - [ ] Editable
+    - [ ] Privacy
+      - [ ] Button
+      - [ ] Last online
+        - [ ] Preview
+        - [ ] Editable
+      - [ ] Profile picture
+        - [ ] Preview
+        - [ ] Editable
+      - [ ] Info
+        - [ ] Preview
+        - [ ] Editable
+      - [ ] Read receipt 
+      - [ ] Groups
+        - [ ] Preview
+        - [ ] Editable
+      - [ ] Blocked contatcs
+        - [ ] Preview
+        - [ ] Editable
+          - [ ] Button
+          - [ ] List 
+          - [ ] Pupup
+    - [ ] Security
+      - [ ] Button
+      - [ ] Editable
+    - [ ] Design
+      - [ ] Button
+      - [ ] Editable (PopUp)
+    - [ ] Chat beground
+      - [ ] Button
+      - [ ] Editable
+    - [ ] Shortcuts
+      - [ ] Button
+      - [ ] PopUp
+    - [ ] Help
+      - [ ] Gif
+      - [ ] Additional area
+      - [ ] Contact us
+        - [ ] Button
+        - [ ] PopUp
+      - [ ] Terms of Service & Privacy Policies
+  - [ ] Status/Stories (of user and other people)
+
+## Quick Start
+
+### Requirements
+- [VSCode](https://code.visualstudio.com)
+- [Docker](https://www.docker.com)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- [DevContains for VS Code](https://code.visualstudio.com/docs/remote/containers) (and its OS requiremnts)
+
+For Windows:
+I **suggest** to clone the repo in your WSL (Linux) environment and **not** on your windows file system. Else the hot-reload will not work well (you will have to enable --poll) and it is pretty slow.
+
+### Installation
+1. Clone Repo
+2. Open VS Code
+3. Open workspace/folder in (Dev) Container (first startup needs some time)
 
 
+### Development server
 
-## ☁ Nx Cloud
+Run `npm run frontend` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-### Distributed Computation Caching & Distributed Task Execution
+### Build
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+Run `npm run ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+## Dokumentation
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+Wil be added...
