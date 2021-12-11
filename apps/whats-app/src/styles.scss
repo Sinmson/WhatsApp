@@ -29,11 +29,4 @@ html, body {
   .icon {
     @apply w-[40px] h-[40px] rounded-full my-auto p-2 text-gray-600 dark:text-gray-500 cursor-pointer;
   }
-
-  .line-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
-  }
 }

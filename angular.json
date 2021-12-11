@@ -20,7 +20,7 @@
       "projectType": "library",
       "root": "libs/ui",
       "sourceRoot": "libs/ui/src",
-      "prefix": "test",
+      "prefix": "wa",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",

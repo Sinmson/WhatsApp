@@ -3,6 +3,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { UiModule } from "@whatsapp/ui";
 import { AppComponent } from './app.component';
 
 
@@ -21,7 +22,7 @@ export default {
   component: AppComponent,
   decorators: [
     moduleMetadata({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule, UiModule],
     })
   ],
 } as Meta<AppComponent>;

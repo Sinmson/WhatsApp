@@ -12,26 +12,8 @@ export class AppComponent {
 
   dark = true;
   chatIsOpen = false;
-  chatSymbolsAreOpen = false;
-  chatSymboOpen = 0;
 
   constructor(private http: HttpClient) {}
 
-  public CloseChat() {
-    this.chatIsOpen = false;
-  }
 
-  public OpenChat() {
-    this.chatIsOpen = true;
-  }
-
-  public OpenChatSymbols() {
-    this.chatSymbolsAreOpen = true;
-    this.chatSymboOpen = 1;
-  }
-  
-  public CloseChatSymbols() {
-    this.chatSymbolsAreOpen = false;
-    this.chatSymboOpen = 0;
-  }
 }

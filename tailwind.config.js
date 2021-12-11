@@ -1,4 +1,3 @@
-const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: "jit",
@@ -8,6 +7,7 @@ module.exports = {
   // },
   content: [
     './apps/whats-app/src/**/*.{html,ts}',
+    './libs/ui/src/**/*.{html,ts}',
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -28,11 +28,6 @@ module.exports = {
         "wa-message-bar": { "dark": "#1e2428;",  "light": "#f0f0f0" }, // compose-panel-background
       },
       screens: {  
-      },
-      transitionTimingFunction: {
-        'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
-        'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
-        'funky': 'cubic-bezier(.17,.67,1,1.23)'
       }
     }
   },
