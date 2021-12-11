@@ -14,6 +14,7 @@ The chat functionality will be implemented with Firebase and does not work with 
     - [Want to use](#want-to-use)
   - [Functionalities](#functionalities)
     - [UI](#ui)
+    - [Backend](#backend)
   - [Quick Start](#quick-start)
     - [Requirements](#requirements)
     - [Installation](#installation)
@@ -150,6 +151,21 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
         - [ ] PopUp
       - [ ] Terms of Service & Privacy Policies
   - [ ] Status/Stories (of user and other people)
+
+### Backend
+- [ ] Create new chat with person / group
+- [ ] Get message from chat with person / group
+- [ ] Save messages to chat with person / group
+- [ ] Get message read status (send, received, read)
+- [ ] Get persons last status
+- [ ] Get all contacts
+- [ ] Get profile information for contact
+- [ ] Get group information for group
+- [ ] Get blocked contacts
+- [ ] Add contact
+- [ ] Block contact
+- [ ] Create Story
+- [ ] Get all stories
 
 ## Quick Start
 
