@@ -206,5 +206,17 @@ Run `npm run ng build` to build the project. The build artifacts will be stored 
 
 Wil be added...
 
+<kbd>ESC</kbd>
+
+> Quote
+
+:tada: 🦖
+
+<details>
+  <summary>UI</summary>
+  Test
+</details>
+
+
 ## Legal
 This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by WhatsApp or any of its affiliates or subsidiaries. This is an independent and unofficial software. Use at your own risk.
