@@ -20,7 +20,15 @@
 	"extensions": [
 		"dbaeumer.vscode-eslint",
 		"angular.ng-template",
-		"mikael.angular-beastcode"
+		"mikael.angular-beastcode",
+		"bradlc.vscode-tailwindcss",
+		"eamodio.gitlens",
+		"yzhang.markdown-all-in-one",
+		"visualstudioexptteam.vscodeintellicode",
+		"ms-azuretools.vscode-docker",
+		"github.vscode-pull-request-github",
+		"yzhang.markdown-all-in-one",
+		"bierner.markdown-emoji"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
