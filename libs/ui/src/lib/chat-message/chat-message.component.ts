@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'wa-chat-message',
   templateUrl: './chat-message.component.html',
-  styleUrls: ['./chat-message.component.scss']
+  styleUrls: ['./chat-message.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class ChatMessageComponent  {
 

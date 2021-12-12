@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'wa-message-bar',
   templateUrl: './message-bar.component.html',
-  styleUrls: ['./message-bar.component.scss']
+  styleUrls: ['./message-bar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class MessageBarComponent  {
 

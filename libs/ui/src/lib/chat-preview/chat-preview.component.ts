@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'wa-chat-preview',
   templateUrl: './chat-preview.component.html',
-  styleUrls: ['./chat-preview.component.scss']
+  styleUrls: ['./chat-preview.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class ChatPreviewComponent  {
 

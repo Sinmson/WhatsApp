@@ -68,7 +68,14 @@
           }
         }
       },
-      "tags": []
+      "tags": [],
+      "schematics": {
+        "@schematics/angular": {
+          "component": {
+            "changeDetection": "OnPush"
+          }
+        }
+      }
     },
     "ui-e2e": {
       "root": "apps/ui-e2e",
@@ -225,7 +232,14 @@
           }
         }
       },
-      "tags": []
+      "tags": [],
+      "schematics": {
+        "@schematics/angular": {
+          "component": {
+            "changeDetection": "OnPush"
+          }
+        }
+      }
     },
     "whats-app-e2e": {
       "root": "apps/whats-app-e2e",

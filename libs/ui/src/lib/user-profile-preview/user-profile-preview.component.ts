@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'wa-user-profile-preview',
   templateUrl: './user-profile-preview.component.html',
-  styleUrls: ['./user-profile-preview.component.scss']
+  styleUrls: ['./user-profile-preview.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
-export class UserProfilePreviewComponent implements OnInit {
+export class UserProfilePreviewComponent  {
 
-  constructor() { }
+  // constructor() { }
 
-  ngOnInit(): void {
-  }
+  
 
 }
