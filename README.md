@@ -33,19 +33,16 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
 - [Firebase](https://firebase.google.com)
 - [Angular](https://angular.io)
 - [Tailwind](https://tailwindcss.com/docs/transition-duration)
-- [cypress](https://www.cypress.io/)
-- [jest](https://jestjs.io/)
+- [Storybook](https://storybook.js.org) (+[CompoDoc](https://compodoc.app))
 
 
 ### Want to use
-- [Storybook](https://storybook.js.org)
 - [Swagger](https://swagger.io)
-- [CompoDoc](https://compodoc.app)
 - [Bit](https://bit.dev/)
 - [RxJs](https://www.learnrxjs.io/)
-- [NgMocks](https://ng-mocks.sudo.eu)
-- [BigHeads](https://github.com/RobertBroersma/bigheads)
-- [faker.js](https://github.com/marak/Faker.js)
+- [cypress](https://www.cypress.io/)
+- [jest](https://jestjs.io/) (+ [NgMocks](https://ng-mocks.sudo.eu))
+- [faker.js](https://github.com/marak/Faker.js) & [BigHeads](https://github.com/RobertBroersma/bigheads)
 
 
 
@@ -53,7 +50,7 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
 
 <details>
   <summary>UI</summary>
-
+  
 - [x] Responsive
 - [ ] Translation
 - [ ] Loading page
@@ -152,7 +149,6 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
         - [ ] PopUp
       - [ ] Terms of Service & Privacy Policies
   - [ ] Status/Stories (of user and other people)
-  
 </details>
 
 <details>
@@ -171,7 +167,6 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
 - [ ] Block contact
 - [ ] Create Story
 - [ ] Get all stories
-
 </details>
 
 ## Quick Start
