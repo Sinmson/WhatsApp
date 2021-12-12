@@ -8,20 +8,42 @@ import { themes } from '@storybook/theming';
 
 
 const customViewports = {
-  kindleFire2: {
-    name: 'Kindle Fire 2',
+  SM: {
+    name: 'SM',
     styles: {
-      width: '600px',
-      height: '963px',
+      width: '640px',
+      height: '1080px',
     },
   },
-  kindleFireHD: {
-    name: 'Kindle Fire HD',
+  MD: {
+    name: 'MD',
     styles: {
-      width: '533px',
-      height: '801px',
+      width: '768px',
+      height: '1080px',
     },
   },
+  LG: {
+    name: 'LG',
+    styles: {
+      width: '1024px',
+      height: '1080px',
+    },
+  },
+  XL: {
+    name: 'XL',
+    styles: {
+      width: '1280px',
+      height: '1080px',
+    },
+  },
+  TWO_XML: {
+    name: '2XML',
+    styles: {
+      width: '1536px',
+      height: '1080px',
+    },
+  },
+
 };
 
 export const parameters = {
@@ -40,5 +62,8 @@ export const parameters = {
        ...MINIMAL_VIEWPORTS,
       ...customViewports,
     },
+  },
+  docs: {
+    theme: themes.light,
   },
 };
