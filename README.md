@@ -72,7 +72,7 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
   - [ ] Context menu
   - [x] Scrollable
   - [ ] Circle for new message nr 
-- [ ] Without selected chat
+- [x] Empty Chat (Hidden partner, chat & message bar)
 - [ ] Chat with
   - [x] Partner with
     - [x] Profile picture 
