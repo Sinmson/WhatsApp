@@ -168,13 +168,14 @@
               "browserTarget": "whats-app:build:production"
             },
             "development": {
-              "browserTarget": "whats-app:build:development"
+              "browserTarget": "whats-app:build:development"              
             }
           },
           "defaultConfiguration": "development",
           "options": {
             "proxyConfig": "apps/whats-app/proxy.conf.json",
-            "port": 4200
+            "port": 4200,
+            "disableHostCheck": true
           }
         },
         "extract-i18n": {
