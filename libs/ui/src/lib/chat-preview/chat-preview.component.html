@@ -1,8 +1,9 @@
-<button (click)="OpenChat()"
+<button
   class="grid grid-cols-chats-profil grid-rows-2 gap-x-4 
   pl-4 py-2.5 h-20 w-full text-left outline-none
   hover:cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-700"
-  [ngClass]="{ 'bg-gray-100 dark:bg-neutral-700': chatIsOpen }">
+  (click)="OpenThisChat()"
+  [ngClass]="{ 'bg-gray-100 dark:bg-neutral-700': openChat?.id === Id }">
   <img class="col-start-1 row-start-1 row-span-2 place-self-center rounded-full" [src]="'https://i.pravatar.cc/50?id=0'"
     loading="lazy" />
   <span class="col-start-2 row-start-1 row-span-1 self-end dark:text-gray-200 text-gray-900">Frank</span>

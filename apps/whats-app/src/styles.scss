@@ -15,10 +15,15 @@ html, body {
   font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
 
   overflow: hidden;
+  text-rendering: optimizeLegibility;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 *,*::before, *::after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 @layer components {
@@ -28,5 +33,6 @@ html, body {
 
   .icon {
     @apply w-[40px] h-[40px] rounded-full my-auto p-2 text-gray-600 dark:text-gray-500 cursor-pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 }

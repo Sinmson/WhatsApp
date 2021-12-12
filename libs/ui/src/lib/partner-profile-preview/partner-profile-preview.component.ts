@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'wa-partner-profile-preview',
@@ -8,8 +8,24 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class PartnerProfilePreviewComponent  {
 
+  /**
+   *  Define if the open chat fits to this chat preview
+   */
+   @Input()  
+   openChat: any = null;
+ 
+   @Output() 
+   openChatChange = new EventEmitter<any>();
+
+   public get OpenChat() { return this.openChat; }
+   public set OpenChat(val: any) { this.openChat =  val; this.openChatChange.emit(val); }
+
+   
   // constructor() { }
 
+  public CloseChat() {
+    this.OpenChat = null;
+  }
   
 
 }

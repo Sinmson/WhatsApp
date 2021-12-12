@@ -12,9 +12,8 @@ export class AppComponent {
   hello$ = this.http.get<Message>('/api/hello');
 
   dark = true;
-  chatIsOpen = false;
+  openChat: any = null;
 
   constructor(private http: HttpClient) {}
-
 
 }

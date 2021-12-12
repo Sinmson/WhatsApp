@@ -1,6 +1,17 @@
-<header class="grid grid-cols-partner-profil-small sm:grid-cols-partner-profil grid-rows-2 gap-x-4 dark:bg-wa-header-dark bg-wa-header-light px-4 py-2.5 shadow row-start-1 row-span-1 col-start-2 h-16 flex-none">
-  <span class="sm:hidden col-start-1 row-start-1 row-span-2 self-center justify-self-center">&LT;</span>
-  <img class="col-start-2 sm:col-start-1 row-start-1 row-span-3 rounded-full place-self-center" src="https://i.pravatar.cc/40" />
-  <span class="col-start-3 sm:col-start-2 row-start-1 row-span-1 dark:text-gray-200 text-gray-900 dark:font-semibold">Frank</span>
-  <span class="col-start-3 sm:col-start-2 row-start-2 row-span-2 text-sm dark:text-gray-300 text-gray-500 font-light">zuletzt online gestern um 22:56</span>
+<header
+  class="grid grid-cols-partner-profil-small sm:grid-cols-partner-profil grid-rows-2 gap-x-4 
+  dark:bg-wa-header-dark bg-wa-header-light shadow 
+  px-4 py-2.5 h-16 flex-none row-start-1 row-span-1 col-start-2" (click)="CloseChat()">
+  <span class="sm:hidden col-start-1 row-start-1 row-span-2 self-center justify-self-center icon hover:text-sky-500">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+    </svg>
+  </span>
+  <img class="col-start-2 sm:col-start-1 row-start-1 row-span-3 rounded-full place-self-center"
+    src="https://i.pravatar.cc/40" />
+  <span
+    class="col-start-3 sm:col-start-2 row-start-1 row-span-1 dark:text-gray-200 text-gray-900 dark:font-semibold">Frank</span>
+  <span
+    class="col-start-3 sm:col-start-2 row-start-2 row-span-2 text-sm dark:text-gray-300 text-gray-500 font-light text-ellipsis overflow-hidden whitespace-nowrap">zuletzt
+    online gestern um 22:56</span>
 </header>

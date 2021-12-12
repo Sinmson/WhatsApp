@@ -1,46 +1,40 @@
-<div class="w-full h-full" 
-  >
-
+<div class="w-full h-full">
   <div class="w-full h-full bg-wa-message-me-light dark:bg-wa-message-me-dark sm:p-6">
-    <div class="container m-auto overflow-hidden flex flex-row h-full border-wa-thumb-light/50 dark:border-wa-thumb-dark/50 border border-t-0 border-b-0 sm:rounded-xl sm:shadow-2xl ">
-      
-      <div class="flex flex-col min-w-full sm:w-[30%] sm:min-w-[300px] transition-all sm:translate-x-0 divide-y divide-x divide-wa-thumb-light/50 dark:divide-wa-thumb-dark/50" [ngClass]="{ '-translate-x-full': chatIsOpen }">        
+    <div
+      class="container m-auto overflow-hidden flex flex-row h-full border-wa-thumb-light/50 dark:border-wa-thumb-dark/50 border border-t-0 border-b-0 sm:rounded-xl sm:shadow-2xl ">
+
+      <div
+        class="flex flex-col min-w-full sm:w-[30%] sm:min-w-[300px] transition-all sm:translate-x-0 divide-y divide-x divide-wa-thumb-light/50 dark:divide-wa-thumb-dark/50"
+        [ngClass]="{ '-translate-x-full': openChat }"
+        >     
         <!-- profil header -->
         <wa-user-profile-preview></wa-user-profile-preview>
 
 
         <!-- Chats -->
-        <div class="h-full overflow-hidden dark:bg-wa-chats-dark bg-wa-chats-light row-start-2 row-span-2 col-start-1 flex-1">
-         
+        <div
+          class="h-full overflow-hidden dark:bg-wa-chats-dark bg-wa-chats-light row-start-2 row-span-2 col-start-1 flex-1">
+
           <wa-all-chat-search></wa-all-chat-search>
 
           <div class="grid grid-flow-row content-start scroll-container ">
-            <wa-chat-preview *ngFor="let item of [].constructor(200); let i = index"></wa-chat-preview>
+            <wa-chat-preview 
+            *ngFor="let item of [].constructor(200); let i = index" 
+            [(openChat)]="openChat"
+            [Id]="i">
+            </wa-chat-preview>
           </div>
-          
-        </div>
 
+        </div>
       </div>
 
-      <div class="flex flex-col min-w-full sm:w-[70%] sm:min-w-[300px] transition-all sm:translate-x-0 divide-y divide-x divide-wa-thumb-light/50 dark:divide-wa-thumb-dark/50" [ngClass]="{ '-translate-x-full': chatIsOpen }">        
-        <!-- partner header -->
-        <wa-partner-profile-preview></wa-partner-profile-preview>
-
-        <!-- Chat -->
-        <div class="dark:bg-wa-chat-dark bg-wa-chat-light row-start-2 row-span-1 col-start-2 flex-1">          
-          <div class="relative w-full h-full">
-            <div
-              class="background absolute top-0 left-0 w-full h-full opacity-5 bg-[url(https://theabbie.github.io/blog/assets/official-whatsapp-background-image.jpg)] dark:invert">
-            </div>
-            <div class="overflow-y-auto flex flex-col-reverse absolute top-0 left-0 w-full pb-2 scroll-container">
-              <wa-chat-message *ngFor="let item of [].constructor(200); let i = index" [isMessageOfUser]="i % 2 === 0"></wa-chat-message>
-            </div>
-          </div>
-        </div>
-
-        <!-- message bar -->
-        <wa-message-bar></wa-message-bar>
-      </div>
+      <wa-chat-panel class="h-full min-w-full                
+                  sm:w-[70%] sm:min-w-[300px] 
+                  transition-all sm:translate-x-0" 
+                  [ngClass]="{ '-translate-x-full': openChat }"
+                  [(openChat)]="openChat">
+      </wa-chat-panel>
     </div>
+
   </div>
 </div>

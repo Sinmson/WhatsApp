@@ -6,6 +6,8 @@ import { AllChatSearchComponent } from './all-chat-search/all-chat-search.compon
 import { PartnerProfilePreviewComponent } from './partner-profile-preview/partner-profile-preview.component';
 import { MessageBarComponent } from './message-bar/message-bar.component';
 import { ChatMessageComponent } from './chat-message/chat-message.component';
+import { ChatComponent } from './chat/chat.component';
+import { ChatPanelComponent } from './chat-panel/chat-panel.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -15,7 +17,9 @@ import { ChatMessageComponent } from './chat-message/chat-message.component';
     AllChatSearchComponent,
     PartnerProfilePreviewComponent,
     MessageBarComponent,
-    ChatMessageComponent
+    ChatMessageComponent,
+    ChatComponent,
+    ChatPanelComponent
   ],
   exports: [
     ChatPreviewComponent,
@@ -23,7 +27,9 @@ import { ChatMessageComponent } from './chat-message/chat-message.component';
     AllChatSearchComponent,
     PartnerProfilePreviewComponent,
     MessageBarComponent,
-    ChatMessageComponent
+    ChatMessageComponent,
+    ChatComponent,
+    ChatPanelComponent
   ],
 })
 export class UiModule {}

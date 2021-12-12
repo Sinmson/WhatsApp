@@ -14,16 +14,14 @@ export default {
     })
   ],
   args: {
-    chatIsOpen: false,
-    // chatIsOpenChange: action("chatIsOpenChange"),
+    openChat: null,
+    // openChatChange: action("openChatChange"),
   },
   argTypes: {
-    chatIsOpen: { 
-      defaultValue: "false", 
-      description: "Define if the open chat fits to this chat preview", 
-      name: "chatIsOpen", 
-      type: "boolean",
-      control: { type: 'boolean' } 
+    openChat: { 
+      defaultValue: null, 
+      description: "Define which chat is opened", 
+      name: "openChat"
     }
   },
   parameters: {
@@ -40,9 +38,9 @@ const Template: Story<ChatPreviewComponent> = (args: ChatPreviewComponent) => ({
   props: {
     ...args,
 
-    // chatIsOpenChange: action("chatIsOpenChange"),
-    chatIsOpenChange: (...args: any[]) => { 
-      action("chatIsOpenChange")(...args);
+    // openChatChange: action("openChatChange"),
+    openChatChange: (...args: any[]) => { 
+      action("openChatChange")(...args);
       // linkTo("WhatsApp/UI/ChatMessageComponent", "Default")(...args);
     },
   },
@@ -53,12 +51,12 @@ export const Default = Template.bind({});
 
 export const ChatIsClosed = Template.bind({});
 ChatIsClosed.args = {
-  chatIsOpen: false
+  openChat: null
 }
 
-export const ChatIsOpen = Template.bind({});
-ChatIsOpen.args = {
-  chatIsOpen: true
+export const OpenChat = Template.bind({});
+OpenChat.args = {
+  openChat: {}
 }
 
 

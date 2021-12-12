@@ -17,17 +17,24 @@ export class ChatPreviewComponent  {
    *  Define if the open chat fits to this chat preview
    */
   @Input()  
-  chatIsOpen = false;
+  openChat: any = null;
 
   @Output() 
-  chatIsOpenChange = new EventEmitter<boolean>();
-  
+  openChatChange = new EventEmitter<any>();
+
+  public get OpenChat() { return this.openChat; }
+  public set OpenChat(val: any) { this.openChat =  val; this.openChatChange.emit(val); }
+
+  // TODO: Remove when we have models
+  protected _Id = -1;
+  public get Id() { return this._Id; }
+  @Input()
+  public set Id(v: number) { this._Id = v; }
   
   // constructor() { }
 
-  public OpenChat() {
-    this.chatIsOpen = true;
-    this.chatIsOpenChange.emit(true);
+  public OpenThisChat() {
+    console.log("ChatPanelComponent | OpenChat");
+    this.OpenChat = { id: this.Id };
   }
-
 }

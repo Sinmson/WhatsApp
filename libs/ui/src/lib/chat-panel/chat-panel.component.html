@@ -1,0 +1,9 @@
+<div class="w-full h-full flex flex-col divide-wa-thumb-light/50 dark:divide-wa-thumb-dark/50  divide-y divide-x">
+   <!-- partner header -->
+   <wa-partner-profile-preview *ngIf="Messages.length > 0" class="flex-none" [(openChat)]="OpenChat"></wa-partner-profile-preview>
+
+   <wa-chat ngDefaultControl class="flex-1" [(openChat)]="OpenChat" [Messages]="Messages"></wa-chat>
+
+   <!-- message bar -->
+   <wa-message-bar class="flex-none" *ngIf="Messages.length > 0"></wa-message-bar>
+</div>
