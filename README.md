@@ -74,6 +74,7 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
   - [x] Last message time
   - [ ] Context menu
   - [x] Scrollable
+  - [ ] Circle for new message nr 
 - [ ] Without selected chat
 - [ ] Chat with
   - [x] Partner with
@@ -199,6 +200,7 @@ Run `npm run ng build` to build the project. The build artifacts will be stored 
 - [ ] Build backend with firebase
 - [ ] Connect to backend
 - [ ] Move Code into components
+- [ ] Oath Login for Github/Google/Etc.
 
 ## Dokumentation
 
