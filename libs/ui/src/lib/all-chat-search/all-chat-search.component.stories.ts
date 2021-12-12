@@ -2,7 +2,7 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { AllChatSearchComponent } from './all-chat-search.component';
 
 export default {
-  title: 'AllChatSearchComponent',
+  title: 'WhatsApp/UI/AllChatSearchComponent',
   component: AllChatSearchComponent,
   decorators: [
     moduleMetadata({

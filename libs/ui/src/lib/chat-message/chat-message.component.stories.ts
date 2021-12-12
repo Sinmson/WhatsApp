@@ -2,7 +2,7 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { ChatMessageComponent } from './chat-message.component';
 
 export default {
-  title: 'ChatMessageComponent',
+  title: 'WhatsApp/UI/ChatMessageComponent',
   component: ChatMessageComponent,
   decorators: [
     moduleMetadata({
