@@ -13,8 +13,6 @@ The chat functionality will be implemented with Firebase and does not work with 
     - [In used](#in-used)
     - [Want to use](#want-to-use)
   - [Functionalities](#functionalities)
-    - [UI](#ui)
-    - [Backend](#backend)
   - [Quick Start](#quick-start)
     - [Requirements](#requirements)
     - [Installation](#installation)
@@ -53,7 +51,9 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
 
 ## Functionalities 
 
-### UI
+<details>
+  <summary>UI</summary>
+
 - [x] Responsive
 - [ ] Translation
 - [ ] Loading page
@@ -152,8 +152,12 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
         - [ ] PopUp
       - [ ] Terms of Service & Privacy Policies
   - [ ] Status/Stories (of user and other people)
+  
+</details>
 
-### Backend
+<details>
+  <summary>Backend</summary>
+  
 - [ ] Create new chat with person / group
 - [ ] Get message from chat with person / group
 - [ ] Save messages to chat with person / group
@@ -167,6 +171,8 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
 - [ ] Block contact
 - [ ] Create Story
 - [ ] Get all stories
+
+</details>
 
 ## Quick Start
 
@@ -215,7 +221,39 @@ Wil be added...
 <details>
   <summary>UI</summary>
   Test
+  
+- [x] one
+- [ ] two
+
 </details>
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
 
 
 ## Legal
