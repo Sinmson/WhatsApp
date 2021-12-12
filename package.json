@@ -9,6 +9,7 @@
     "frontend": "nx serve whats-app",
     "storybook:whatsapp": "nx run whats-app:storybook",
     "storybook:ui": "nx run ui:storybook",
+    "storybook:ui:g": "nx g @nrwl/angular:stories ui",
     "build": "nx build",
     "test": "nx test"
   },
