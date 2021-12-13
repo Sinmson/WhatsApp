@@ -10,6 +10,10 @@ export class ChatMessageComponent  {
 
   @Input()
   isMessageOfUser = true;
+
+  
+  @Input()
+  message = "<Message>";
   // constructor() { }
 
   

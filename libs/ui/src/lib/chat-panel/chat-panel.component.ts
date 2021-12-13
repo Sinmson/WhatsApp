@@ -16,10 +16,7 @@ export class ChatPanelComponent  {
   
   protected _Messages: string[] = [];
   public get Messages() { 
-    // TODO: Remove when we have real openChat and messages
-    if(this.OpenChat) {
-      return ["REMOVE ME"];
-    }
+    
     return this._Messages; 
   }
   public set Messages(v: string[]) { this._Messages = v; }

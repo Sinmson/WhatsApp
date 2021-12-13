@@ -2,7 +2,7 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { PartnerProfilePreviewComponent } from './partner-profile-preview.component';
 
 export default {
-  title: 'WhatsApp/UI/PartnerProfilePreviewComponent',
+  title: 'WhatsApp/UI/Components/PartnerProfilePreviewComponent',
   component: PartnerProfilePreviewComponent,
   decorators: [
     moduleMetadata({

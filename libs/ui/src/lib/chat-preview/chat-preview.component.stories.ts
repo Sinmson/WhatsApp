@@ -6,7 +6,7 @@ import { action } from "@storybook/addon-actions";
 import { screen, userEvent, waitFor, within } from '@storybook/testing-library';
 
 export default {
-  title: 'WhatsApp/UI/ChatPreviewComponent',
+  title: 'WhatsApp/UI/Components/ChatPreviewComponent',
   component: ChatPreviewComponent,
   decorators: [
     moduleMetadata({

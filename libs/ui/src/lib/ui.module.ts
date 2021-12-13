@@ -8,6 +8,7 @@ import { MessageBarComponent } from './message-bar/message-bar.component';
 import { ChatMessageComponent } from './chat-message/chat-message.component';
 import { ChatComponent } from './chat/chat.component';
 import { ChatPanelComponent } from './chat-panel/chat-panel.component';
+import { ChatsPanelComponent } from './chats-panel/chats-panel.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -19,7 +20,8 @@ import { ChatPanelComponent } from './chat-panel/chat-panel.component';
     MessageBarComponent,
     ChatMessageComponent,
     ChatComponent,
-    ChatPanelComponent
+    ChatPanelComponent,
+    ChatsPanelComponent
   ],
   exports: [
     ChatPreviewComponent,
@@ -29,7 +31,8 @@ import { ChatPanelComponent } from './chat-panel/chat-panel.component';
     MessageBarComponent,
     ChatMessageComponent,
     ChatComponent,
-    ChatPanelComponent
+    ChatPanelComponent,
+    ChatsPanelComponent
   ],
 })
 export class UiModule {}

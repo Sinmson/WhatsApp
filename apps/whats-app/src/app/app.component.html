@@ -3,30 +3,12 @@
     <div
       class="container m-auto overflow-hidden flex flex-row h-full border-wa-thumb-light/50 dark:border-wa-thumb-dark/50 border border-t-0 border-b-0 sm:rounded-xl sm:shadow-2xl ">
 
-      <div
+      <wa-chats-panel
         class="flex flex-col min-w-full sm:w-[30%] sm:min-w-[300px] transition-all sm:translate-x-0 divide-y divide-x divide-wa-thumb-light/50 dark:divide-wa-thumb-dark/50"
         [ngClass]="{ '-translate-x-full': openChat }"
         >     
-        <!-- profil header -->
-        <wa-user-profile-preview></wa-user-profile-preview>
-
-
-        <!-- Chats -->
-        <div
-          class="h-full overflow-hidden dark:bg-wa-chats-dark bg-wa-chats-light row-start-2 row-span-2 col-start-1 flex-1">
-
-          <wa-all-chat-search></wa-all-chat-search>
-
-          <div class="grid grid-flow-row content-start scroll-container ">
-            <wa-chat-preview 
-            *ngFor="let item of [].constructor(200); let i = index" 
-            [(openChat)]="openChat"
-            [Id]="i">
-            </wa-chat-preview>
-          </div>
-
-        </div>
-      </div>
+        
+      </wa-chats-panel>
 
       <wa-chat-panel class="h-full min-w-full                
                   sm:w-[70%] sm:min-w-[300px] 

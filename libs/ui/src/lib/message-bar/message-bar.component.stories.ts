@@ -2,7 +2,7 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { MessageBarComponent } from './message-bar.component';
 
 export default {
-  title: 'WhatsApp/UI/MessageBarComponent',
+  title: 'WhatsApp/UI/Components/MessageBarComponent',
   component: MessageBarComponent,
   decorators: [
     moduleMetadata({

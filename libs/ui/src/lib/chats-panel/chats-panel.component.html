@@ -1,0 +1,21 @@
+<div>
+  <!-- profil header -->
+  <wa-user-profile-preview></wa-user-profile-preview>
+
+
+  <!-- Chats -->
+  <div
+    class="h-full overflow-hidden dark:bg-wa-chats-dark bg-wa-chats-light row-start-2 row-span-2 col-start-1 flex-1">
+
+    <wa-all-chat-search></wa-all-chat-search>
+
+    <div class="grid grid-flow-row content-start scroll-container ">
+      <wa-chat-preview 
+      *ngFor="let item of [].constructor(200); let i = index" 
+      [(openChat)]="openChat"
+      [Id]="i">
+      </wa-chat-preview>
+    </div>
+
+  </div>
+</div>

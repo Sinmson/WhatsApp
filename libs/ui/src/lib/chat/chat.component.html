@@ -1,16 +1,16 @@
 <!-- Chat -->
 <div class="row-start-2 h-full bg-wa-header-light dark:bg-wa-header-dark flex">
-  <div class="relative w-full h-full dark:bg-wa-chat-dark bg-wa-chat-light" *ngIf="Messages.length > 0">
+  <div class="relative w-full h-full dark:bg-wa-chat-dark bg-wa-chat-light" *ngIf="OpenChat">
     <div
       class=" absolute top-0 left-0 w-full h-full opacity-5 bg-[url(https://theabbie.github.io/blog/assets/official-whatsapp-background-image.jpg)] dark:invert">
     </div>
     <div class="overflow-y-auto flex flex-col-reverse absolute top-0 left-0 w-full pb-2 scroll-container ">
-      <wa-chat-message *ngFor="let item of [].constructor(20); let i = index" [isMessageOfUser]="i % 2 === 0">
+      <wa-chat-message *ngFor="let message of Messages; let i = index" [isMessageOfUser]="i % 2 === 0" [message]="message">
       </wa-chat-message>
       <div class="h-3 flex-none"></div>
     </div>
   </div>
-  <div *ngIf="Messages.length === 0" class="text-gray-500 dark:text-gray-400 font-normal text-center m-auto w-4/5 max-w-xl">
+  <div *ngIf="!OpenChat" class="text-gray-500 dark:text-gray-400 font-normal text-center m-auto w-4/5 max-w-xl">
     <span class="hidden dark:flex justify-center items-center">
       <svg width="360" viewBox="0 0 303 172" fill="none" preserveAspectRatio="xMidYMid meet" class="">
         <path fill-rule="evenodd" clip-rule="evenodd"
