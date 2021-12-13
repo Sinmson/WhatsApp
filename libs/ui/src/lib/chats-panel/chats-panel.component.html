@@ -1,18 +1,18 @@
-<div>
+<div class="w-full h-full flex flex-col overflow-y-hidden">
   <!-- profil header -->
   <wa-user-profile-preview></wa-user-profile-preview>
 
 
   <!-- Chats -->
   <div
-    class="h-full overflow-hidden dark:bg-wa-chats-dark bg-wa-chats-light row-start-2 row-span-2 col-start-1 flex-1">
+    class="h-full overflow-y-hidden dark:bg-wa-chats-dark bg-wa-chats-light row-start-2 row-span-2 col-start-1 flex-1">
 
     <wa-all-chat-search></wa-all-chat-search>
 
     <div class="grid grid-flow-row content-start scroll-container ">
       <wa-chat-preview 
       *ngFor="let item of [].constructor(200); let i = index" 
-      [(openChat)]="openChat"
+      [(openChat)]="OpenChat"
       [Id]="i">
       </wa-chat-preview>
     </div>

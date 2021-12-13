@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import { ContextMenuService } from "../context-menu/context-menu.service";
 
 /**
  * Test
@@ -30,11 +31,23 @@ export class ChatPreviewComponent  {
   public get Id() { return this._Id; }
   @Input()
   public set Id(v: number) { this._Id = v; }
+
+  protected _ContextMenuEntries: string[] = ["Chat archivieren", "Benachr. stummschalten", "Gruppe verlassen", "Chat fixieren", "Als ungelesen markieren"];
+  public get ContextMenuEntries() { return this._ContextMenuEntries; }
+  public set ContextMenuEntries(v: string[]) { this._ContextMenuEntries = v; }
+
   
-  // constructor() { }
+  constructor(private contextMenuService: ContextMenuService) { }
 
   public OpenThisChat() {
     console.log("ChatPanelComponent | OpenChat");
     this.OpenChat = { id: this.Id };
+  }
+
+  public async OpenContextMenu(e: Event) {
+    console.log("ChatPanelComponent (",this.Id,") | selectedIndex");
+    e.stopPropagation();
+    const selectedIndex = await this.contextMenuService.Open(e.target as HTMLElement, this.ContextMenuEntries);
+    console.log("ChatPanelComponent (",this.Id,") | selectedIndex", selectedIndex);
   }
 }

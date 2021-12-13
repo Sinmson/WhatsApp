@@ -1,22 +1,36 @@
-<div class="w-full h-full">
-  <div class="w-full h-full bg-wa-message-me-light dark:bg-wa-message-me-dark sm:p-6">
+<div class="w-full h-full dark">
+  <div class="w-full h-full bg-wa-message-me-light dark:bg-wa-message-me-dark sm:p-6
+              ">
     <div
-      class="container m-auto overflow-hidden flex flex-row h-full border-wa-thumb-light/50 dark:border-wa-thumb-dark/50 border border-t-0 border-b-0 sm:rounded-xl sm:shadow-2xl ">
+      class="container m-auto overflow-y-hidden
+      flex flex-row h-full 
+      sm:rounded-xl sm:shadow-2xl">
 
       <wa-chats-panel
-        class="flex flex-col min-w-full sm:w-[30%] sm:min-w-[300px] transition-all sm:translate-x-0 divide-y divide-x divide-wa-thumb-light/50 dark:divide-wa-thumb-dark/50"
+        class="flex flex-col min-w-full 
+        sm:w-[30%] sm:min-w-[300px] 
+        transition-all sm:translate-x-0
+        border-wa-thumb-light dark:border-wa-thumb-dark border border-y-0"
         [ngClass]="{ '-translate-x-full': openChat }"
+        [(openChat)]="openChat"
         >     
         
       </wa-chats-panel>
 
       <wa-chat-panel class="h-full min-w-full                
                   sm:w-[70%] sm:min-w-[300px] 
-                  transition-all sm:translate-x-0" 
+                  transition-all sm:translate-x-0
+                  border-wa-thumb-light dark:border-wa-thumb-dark border border-y-0" 
                   [ngClass]="{ '-translate-x-full': openChat }"
                   [(openChat)]="openChat">
       </wa-chat-panel>
     </div>
 
   </div>
+  
+  <wa-context-menu 
+  [Entries]="CMS.Entries"
+  [Show]="CMS.Show"
+  [BaseElement]="CMS.BaseElement"
+  (entrySelect)="CMS.Close($event)"></wa-context-menu>
 </div>

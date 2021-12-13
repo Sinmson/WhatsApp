@@ -9,9 +9,12 @@ import { ChatMessageComponent } from './chat-message/chat-message.component';
 import { ChatComponent } from './chat/chat.component';
 import { ChatPanelComponent } from './chat-panel/chat-panel.component';
 import { ChatsPanelComponent } from './chats-panel/chats-panel.component';
+import { ContextMenuComponent } from './context-menu/context-menu.component';
+import { ContextMenuService } from "./context-menu/context-menu.service";
 
 @NgModule({
   imports: [CommonModule],
+  providers: [ ContextMenuService ],
   declarations: [
     ChatPreviewComponent,
     UserProfilePreviewComponent,
@@ -21,7 +24,8 @@ import { ChatsPanelComponent } from './chats-panel/chats-panel.component';
     ChatMessageComponent,
     ChatComponent,
     ChatPanelComponent,
-    ChatsPanelComponent
+    ChatsPanelComponent,
+    ContextMenuComponent
   ],
   exports: [
     ChatPreviewComponent,
@@ -32,7 +36,8 @@ import { ChatsPanelComponent } from './chats-panel/chats-panel.component';
     ChatMessageComponent,
     ChatComponent,
     ChatPanelComponent,
-    ChatsPanelComponent
+    ChatsPanelComponent,
+    ContextMenuComponent
   ],
 })
 export class UiModule {}

@@ -15,12 +15,12 @@ module.exports = {
       gridTemplateColumns: {
         'partner-profil-small': 'auto 50px 1fr auto auto',
         'partner-profil': '50px 1fr auto auto',
-        'chats-profil': '40px 1fr auto auto',
+        'chats-profil': '40px 1fr minmax(0, 40px) minmax(0, 40px)',
       }, 
       colors: {
         "wa-chat": { "dark": "#0d1418", "light": "#e5ddd5" }, // conversation-panel-background
         "wa-chats": { "dark": "#131c21",  "light": "#FFFFFF" },
-        "wa-header": { "dark": "#2a2f32",  "light": "#EDEDED" },
+        "wa-header": { "dark": "#2a2f32",  "light": "#ededed" }, // panel-header-background
         "wa-thumb": { "dark": "#394045",  "light": "#CCCCCC" },
         "wa-search": { "dark": "#323739",  "light": "#F6F6F6" },
         "wa-message-them": { "dark": "#262D31",  "light": "#FFFFFF" },

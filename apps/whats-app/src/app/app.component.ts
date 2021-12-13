@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Message } from '@whatsapp/api-interfaces';
+import { ContextMenuService } from "@whatsapp/ui";
 
 @Component({
   selector: 'wa-root',
@@ -14,6 +15,8 @@ export class AppComponent {
   dark = true;
   openChat: any = null;
 
-  constructor(private http: HttpClient) {}
+  public get CMS() { return this.contextMenuService; }
+
+  constructor(private http: HttpClient, private contextMenuService: ContextMenuService) {}
 
 }

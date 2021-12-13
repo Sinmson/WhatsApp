@@ -4,6 +4,7 @@ import { ChatPreviewComponent } from './chat-preview.component';
 import { action } from "@storybook/addon-actions";
 // import { linkTo } from "@storybook/addon-links";
 import { screen, userEvent, waitFor, within } from '@storybook/testing-library';
+import { ContextMenuComponent } from "../context-menu/context-menu.component";
 
 export default {
   title: 'WhatsApp/UI/Components/ChatPreviewComponent',
@@ -11,6 +12,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
+      declarations: [ ContextMenuComponent ]
     })
   ],
   args: {
@@ -48,15 +50,20 @@ const Template: Story<ChatPreviewComponent> = (args: ChatPreviewComponent) => ({
 
 
 export const Default = Template.bind({});
+Default.args = {
+  Id: 0,
+  openChat: null
+}
 
 export const ChatIsClosed = Template.bind({});
 ChatIsClosed.args = {
-  openChat: null
+  ...Default.args
 }
 
 export const OpenChat = Template.bind({});
 OpenChat.args = {
-  openChat: {}
+  ...Default.args,
+  openChat: { id: 0 }
 }
 
 

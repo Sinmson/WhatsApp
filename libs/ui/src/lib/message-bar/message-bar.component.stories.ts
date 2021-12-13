@@ -13,10 +13,15 @@ export default {
 
 const Template: Story<MessageBarComponent> = (args: MessageBarComponent) => ({
   component: MessageBarComponent,
-  props: args,
+  props: {
+    ...args,
+    args: {
+    }
+  },
 });
 
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
+  
 }
