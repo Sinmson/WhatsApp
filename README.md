@@ -38,7 +38,7 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
 
 ### Want to use
 - [Swagger](https://swagger.io)
-- [Bit](https://bit.dev/)
+- [Bit](https://bit.dev/) (maybe replace/add to [Storybook](https://storybook.js.org))
 - [RxJs](https://www.learnrxjs.io/)
 - [cypress](https://www.cypress.io/)
 - [jest](https://jestjs.io/) (+ [NgMocks](https://ng-mocks.sudo.eu))
