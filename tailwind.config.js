@@ -7,7 +7,7 @@ module.exports = {
   // },
   content: [
     './apps/whats-app/src/**/*.{html,ts}',
-    './libs/ui/src/**/*.{html,ts}',
+    './libs/ui/src/**/*.{html,ts}'
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -28,6 +28,9 @@ module.exports = {
         "wa-message-bar": { "dark": "#1e2428;",  "light": "#f0f0f0" }, // compose-panel-background
       },
       screens: {  
+      },
+      maxWidth: {
+        "inherit": "inherit"
       }
     }
   },
