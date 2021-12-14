@@ -1,10 +1,5 @@
 
 module.exports = {
-  mode: "jit",
-  // purge: {
-  //   enabled: process.env.NODE_ENV === 'production',
-    
-  // },
   content: [
     './apps/whats-app/src/**/*.{html,ts}',
     './libs/ui/src/**/*.{html,ts}'
