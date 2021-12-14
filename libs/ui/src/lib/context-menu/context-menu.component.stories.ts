@@ -25,25 +25,24 @@ const Template: Story<ContextMenuComponent> = (args: ContextMenuComponent) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  entries: [],
-  show: false
+  Entries: [],
+  Show: false
 }
 
 export const NoEntries = Template.bind({});
 NoEntries.args = {
-  ...Default.args,
-  entries: []
+  ...Default.args
 }
 
 export const WithEntriesHidden = Template.bind({});
 WithEntriesHidden.args = {
   ...Default.args,
-  entries: ["Chat archivieren", "Benachr. stummschalten", "Gruppe verlassen", "Chat fixieren", "Als ungelesen markieren"]
+  Entries: ["Chat archivieren", "Benachr. stummschalten", "Gruppe verlassen", "Chat fixieren", "Als ungelesen markieren"]
 }
 
 export const WithEntriesShown = Template.bind({});
 WithEntriesShown.args = {
   ...WithEntriesHidden.args,
-  show: true
+  Show: true
 }
 
