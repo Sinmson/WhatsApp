@@ -47,7 +47,7 @@ export class ChatPreviewComponent  {
   public async OpenContextMenu(e: Event) {
     console.log("ChatPanelComponent (",this.Id,") | selectedIndex");
     e.stopPropagation(); // To not trigger click of the chat preview div 
-    const selectedIndex = await this.contextMenuService.Open(e.target as HTMLElement, this.ContextMenuEntries, "bottom left");
+    const selectedIndex = await this.contextMenuService.Open(e.target as HTMLElement, this.ContextMenuEntries, "bottom right");
     console.log("ChatPanelComponent (",this.Id,") | selectedIndex", selectedIndex);
   }
 }

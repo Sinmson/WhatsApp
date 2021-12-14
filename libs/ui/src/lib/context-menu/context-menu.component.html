@@ -1,9 +1,10 @@
-<div #waContextMenu class="absolute z-20 transition-none pointer-events-none max-w-inherit"     
+<div #waContextMenu 
+    class="absolute z-20 transition-none pointer-events-none max-w-inherit"     
     [ngClass]="{ '!pointer-events-auto': Show }" 
     [ngStyle]="NgStyle">  
-  <ul class="flex flex-col justify-start shadow-md
-            border border-gray-100 dark:border-transparent
-            bg-wa-chats-light dark:bg-wa-header-dark py-2
+  <ul class="flex flex-col justify-start 
+             py-2 bg-wa-chats-light dark:bg-wa-header-dark
+             border border-gray-100 dark:border-neutral-900/10 shadow-md
             opacity-0 scale-0 transition-[transform,opacity]"                     
             [ngClass]="[ Show ? 'scale-100 !opacity-100' : '' ]"
             [ngStyle]="NgStyle2"
