@@ -1,10 +1,11 @@
-<header
-  class="grid grid-cols-partner-profil-small sm:grid-cols-partner-profil grid-rows-2 gap-x-4 
+<header class="grid grid-cols-partner-profil-small sm:grid-cols-partner-profil grid-rows-2 gap-x-4 
   dark:bg-wa-header-dark bg-wa-header-light shadow 
-  px-4 py-2.5 h-16 flex-none row-start-1 row-span-1 col-start-2" >
-  <span class="sm:hidden col-start-1 row-start-1 row-span-2 self-center justify-self-center icon hover:text-sky-500" (click)="CloseChat()">
+  px-4 py-2.5 h-16 flex-none row-start-1 row-span-1 col-start-2">
+  <span class="sm:hidden col-start-1 row-start-1 row-span-2 self-center justify-self-center icon hover:text-sky-500"
+    (click)="CloseChat()">
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+      <path fill-rule="evenodd"
+        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
     </svg>
   </span>
   <img class="col-start-2 sm:col-start-1 row-start-1 row-span-3 rounded-full place-self-center"
@@ -14,4 +15,10 @@
   <span
     class="col-start-3 sm:col-start-2 row-start-2 row-span-2 text-sm text-gray-600 dark:text-gray-300/50 font-light text-ellipsis overflow-hidden whitespace-nowrap">zuletzt
     online gestern um 22:56</span>
+  <span class="col-start-4 col-span-1 row-start-1 row-span-2 icon" title="Suchen ...">
+    <svg viewBox="0 0 24 24" class=""><path fill="currentColor" d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path></svg>
+  </span>
+  <span class="col-start-5 col-span-1 row-start-1 row-span-2 icon" title="Menü" (click)="OpenContextMenu($event)">
+    <svg viewBox="0 0 24 24" class=""><path fill="currentColor" d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z"></path></svg>
+  </span>
 </header>
