@@ -42,7 +42,7 @@ I rebuild WhatsApp Web as a challenge and to keep up to date with current techno
 - [RxJs](https://www.learnrxjs.io/)
 - [cypress](https://www.cypress.io/)
 - [jest](https://jestjs.io/) (+ [NgMocks](https://ng-mocks.sudo.eu))
-- [faker.js](https://github.com/marak/Faker.js) & [BigHeads](https://github.com/RobertBroersma/bigheads)
+- [faker.js](https://github.com/marak/Faker.js)
 
 
 
