@@ -22,7 +22,8 @@
                   transition-all sm:translate-x-0
                   border-wa-thumb-light dark:border-wa-thumb-dark border border-y-0" 
                   [ngClass]="{ '-translate-x-full': openChat }"
-                  [(openChat)]="openChat">
+                  [(openChat)]="openChat"
+                  [Messages]="['test']">
       </wa-chat-panel>
     </div>
 

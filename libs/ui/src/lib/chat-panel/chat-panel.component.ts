@@ -15,10 +15,10 @@ export class ChatPanelComponent  {
   openChatChange = new EventEmitter<any>();
   
   protected _Messages: string[] = [];
-  public get Messages() { 
-    
+  public get Messages() {     
     return this._Messages; 
   }
+  @Input()
   public set Messages(v: string[]) { this._Messages = v; }
 
   public get OpenChat() { return this.openChat; }

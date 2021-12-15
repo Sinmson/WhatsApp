@@ -26,6 +26,9 @@ module.exports = {
       },
       maxWidth: {
         "inherit": "inherit"
+      },
+      fontSize: {
+        '2xs': ['.7rem', '1rem'],
       }
     }
   },

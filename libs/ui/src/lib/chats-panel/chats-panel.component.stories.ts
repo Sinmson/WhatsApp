@@ -13,6 +13,7 @@ export default {
       declarations: [UserProfilePreviewComponent, AllChatSearchComponent, ChatPreviewComponent]
     })
   ],
+  subcomponents: [UserProfilePreviewComponent, AllChatSearchComponent, ChatPreviewComponent]
 } as Meta<ChatsPanelComponent>;
 
 const Template: Story<ChatsPanelComponent> = (args: ChatsPanelComponent) => ({

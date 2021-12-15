@@ -16,6 +16,7 @@ export default {
       declarations: [PartnerProfilePreviewComponent, ChatComponent, MessageBarComponent, ChatMessageComponent]
     })
   ],
+  subcomponents: [PartnerProfilePreviewComponent, ChatComponent, MessageBarComponent]
 } as Meta<ChatPanelComponent>;
 
 const Template: Story<ChatPanelComponent> = (args: ChatPanelComponent) => ({
