@@ -9,8 +9,8 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         'partner-profil-small': 'auto 50px 1fr auto auto',
-        'partner-profil': '50px 1fr minmax(0, 40px) minmax(0, 40px)',
-        'chats-profil': '40px 1fr minmax(0, 40px) minmax(0, 40px)',
+        'partner-profil': '40px 1fr minmax(0, 40px) minmax(0, 40px)',
+        'chats-profil': '50px 1fr minmax(0, 40px) minmax(0, 40px)',
       }, 
       colors: {
         "wa-chat": { "dark": "#0d1418", "light": "#e5ddd5" }, // conversation-panel-background
