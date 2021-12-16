@@ -134,12 +134,12 @@ export class ContextMenuComponent implements AfterViewChecked {
   }
 
   ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked | elContextMenu", this.elContextMenu);
-    console.log("ngAfterViewChecked | elContextMenu is in viewport", this.IsInViewport(this.elContextMenu.nativeElement));
-    console.log("ngStyle", this.NgStyle);
     if(this.Show && !!this.BaseElement 
       && !!this.elContextMenu?.nativeElement 
       && !this.IsInViewport(this.elContextMenu.nativeElement)) {
+        console.log("ngAfterViewChecked | elContextMenu", this.elContextMenu);
+        console.log("ngAfterViewChecked | elContextMenu is in viewport", this.IsInViewport(this.elContextMenu.nativeElement));
+        console.log("ngStyle", this.NgStyle);
       const directionWithMostSpace = this.DirectionWithMostSpace(this.BaseElement, this.elContextMenu.nativeElement);
       if(directionWithMostSpace !== this.TmpDirection) {
         console.log("CHANGE DIRECTION TO", directionWithMostSpace)

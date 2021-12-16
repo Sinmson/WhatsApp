@@ -37,13 +37,16 @@
           }
         },
         "storybook": {
-          "builder": "@nrwl/storybook:storybook",
+          "builder": "@nrwl/storybook:storybook",  
           "options": {
             "uiFramework": "@storybook/angular",
             "port": 4400,
             "config": {
               "configFolder": "libs/ui/.storybook"
-            }
+            },
+            "styles": [
+              "node_modules/@ctrl/ngx-emoji-mart/picker.css"
+            ]
           },
           "configurations": {
             "ci": {

@@ -1,0 +1,146 @@
+.emoji-mart {
+  border: none;
+  font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #CCCCCC;
+  --wa-search: #F6F6F6;
+  --wa-message-bar: #f0f0f0;
+  
+  background-color: var(--wa-message-bar);
+  
+  &.emoji-mart-dark {
+    --scrollbar-track: transparent;
+    --scrollbar-thumb: #394045;
+    --wa-search: #323739;
+    --wa-message-bar: #1e2428;
+
+    background-color: var(--wa-message-bar);
+
+    & .emoji-mart-search input {
+      background-color: var(--wa-search);
+    }
+
+  }
+
+  & .emoji-mart-search input {
+    background-color: var(--wa-search);
+  }
+
+  & .emoji-mart-anchor > div > svg {
+    margin: auto;
+  }
+
+  & .emoji-mart-category {
+    padding-bottom: 0.75rem;
+  }
+
+  & .emoji-mart-search {
+    padding: 0 20px 0 12px;
+    background-color: var(--wa-message-bar);
+  }
+
+  & .emoji-mart-scroll, & emoji-category, & .emoji-mart-category, & .emoji-mart-category-label, & .emoji-mart-category-label span {
+    background-color: inherit;
+  }
+
+  & .emoji-mart-scroll {
+    // padding-top: 50px;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+  
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: var(--scrollbar-track);
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb);
+    }
+  
+  }
+
+  & .emoji-mart-category-label {
+    position: initial;
+    & span {
+      font-size: inherit;
+      font-weight: inherit;
+      opacity: 0.5;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  & .emoji-mart-bar, & .emoji-mart-search input {
+    border: none;
+  }
+
+  & .emoji-mart-search input {
+    padding: 12px 12px;
+  }
+
+  & .emoji-mart-search-icon {
+    display: none;
+  }
+
+  & .emoji-mart-anchors {
+    height: 44px;
+
+    & .emoji-mart-anchor {
+      cursor: pointer;
+      padding: 0;
+
+      & > div {
+        display: flex;
+        height: 100%;
+      }
+
+      &.emoji-mart-anchor-selected {
+        transition: all 0.1s ease-in-out;
+        transition-delay: 0.15s;
+        color: unset !important;
+
+        & .emoji-mart-anchor-bar {
+          opacity: 1;
+        }
+      }
+
+      & .emoji-mart-anchor-bar {
+        transition: all 0.1s ease-in-out;
+        transition-delay: 0.15s;
+        height: 4px;
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+
+  }
+
+  
+
+  & .emoji-mart-anchors svg, & .emoji-mart-anchors img {
+    height: 24px;
+  }
+
+  & .emoji-mart-emoji  { 
+    
+    & span {
+      cursor: pointer;
+    }
+
+    &::before {
+      display: none;
+      opacity: 0;
+      user-select: none;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}
+

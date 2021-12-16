@@ -4,6 +4,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import '~@ctrl/ngx-emoji-mart/picker.css'; // TODO: Maybe move to UI project
+
 html, body {
   width: 100%;
   min-height: 100%;

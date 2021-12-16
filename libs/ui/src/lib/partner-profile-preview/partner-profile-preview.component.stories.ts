@@ -1,3 +1,4 @@
+import { EmojiModule } from "@ctrl/ngx-emoji-mart/ngx-emoji";
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { PartnerProfilePreviewComponent } from './partner-profile-preview.component';
 

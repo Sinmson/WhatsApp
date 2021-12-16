@@ -12,8 +12,11 @@ import { ChatsPanelComponent } from './chats-panel/chats-panel.component';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
 import { ContextMenuService } from "./context-menu/context-menu.service";
 
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
+
+
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, PickerModule],
   providers: [ ContextMenuService ],
   declarations: [
     ChatPreviewComponent,
@@ -37,7 +40,8 @@ import { ContextMenuService } from "./context-menu/context-menu.service";
     ChatComponent,
     ChatPanelComponent,
     ChatsPanelComponent,
-    ContextMenuComponent
+    ContextMenuComponent,
+    PickerModule
   ],
 })
 export class UiModule {}
