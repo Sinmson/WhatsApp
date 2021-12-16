@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 
-import { UiModule } from "@whatsapp/ui"
+import { UiModule } from "@whatsapp/ui";
 
 @NgModule({
   declarations: [AppComponent],

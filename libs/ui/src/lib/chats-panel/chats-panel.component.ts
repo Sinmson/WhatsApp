@@ -14,12 +14,20 @@ export class ChatsPanelComponent  {
    */
    @Input()  
    openChat: any = null;
- 
+
    @Output() 
    openChatChange = new EventEmitter<any>();
+
+   @Output() 
+   openSettings = new EventEmitter();
+ 
  
    public get OpenChat() { return this.openChat; }
    public set OpenChat(val: any) { this.openChat =  val; this.openChatChange.emit(val); }
+   
+   public OpenSettings() { 
+     this.openSettings.emit(); 
+   }
 
   // constructor() { }
 

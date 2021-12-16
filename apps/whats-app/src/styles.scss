@@ -31,7 +31,7 @@ html, body {
 
 @layer components {
   .scroll-container {
-    @apply overflow-y-auto h-full scrollbar dark:scrollbar-thumb-wa-thumb-dark dark:scrollbar-track-transparent scrollbar-thumb-wa-thumb-light scrollbar-track-transparent scrollbar-thin;
+    @apply overflow-y-auto max-h-full scrollbar dark:scrollbar-thumb-wa-thumb-dark dark:scrollbar-track-transparent scrollbar-thumb-wa-thumb-light scrollbar-track-transparent scrollbar-thin;
   }
 
   .icon {

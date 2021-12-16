@@ -1,38 +1,44 @@
 <div class="w-full h-full" [ngClass]="{ 'dark': dark }">
   <div class="w-full h-full bg-wa-message-me-light dark:bg-wa-message-me-dark sm:p-6
               ">
-    <div
-      class="container m-auto overflow-hidden
-      flex flex-row h-full 
+    <div class="container m-auto overflow-hidden
+      flex flex-row h-full relative
       sm:rounded-xl sm:shadow-2xl">
 
-      <wa-chats-panel
-        class="flex flex-col min-w-full 
-        sm:w-[30%] sm:min-w-[300px] 
-        transition-all sm:translate-x-0
-        border-wa-thumb-light dark:border-wa-thumb-dark border border-y-0"
-        [ngClass]="{ '-translate-x-full': openChat }"
-        [(openChat)]="openChat"
-        >     
-        
-      </wa-chats-panel>
+
+      <div class="min-w-full h-full flex flow-row
+                  sm:w-[30%] sm:min-w-[300px]
+                  transition-all sm:translate-x-0
+                  border-wa-thumb-light dark:border-wa-thumb-dark border border-y-0"
+                  >
+
+        <wa-chats-panel 
+        class="w-full h-full flex-none
+              transition-all sm:translate-x-0" 
+          [(openChat)]="openChat" (openSettings)="OpenSettings()">
+        </wa-chats-panel>
+
+        <wa-settings-panel 
+          class="w-full h-full flex-none
+                transition-all -translate-x-[200%]"
+          [ngClass]="{ '-translate-x-[100%]': isSettingsPanelOpen }" 
+          [choices]="settingsChoices"
+          (closePanel)="CloseSettings()"
+          (clickChoice)="HandleSettingChoiceClicked($event)">
+        </wa-settings-panel>
+      </div>
 
       <wa-chat-panel class="h-full min-w-full                
                   sm:w-[70%] sm:min-w-[300px] 
                   transition-all sm:translate-x-0
-                  border-wa-thumb-light dark:border-wa-thumb-dark border border-y-0" 
-                  [ngClass]="{ '-translate-x-full': openChat }"
-                  [(openChat)]="openChat"
-                  [Messages]="['test']">
+                  border-wa-thumb-light dark:border-wa-thumb-dark border border-y-0"
+                  [ngClass]="{ '-translate-x-full': openChat }" 
+        [(openChat)]="openChat" [Messages]="['test']">
       </wa-chat-panel>
     </div>
 
   </div>
-  
-  <wa-context-menu class="max-w-full md:max-w-sm"
-  [Direction]="CMS.Direction"
-  [Entries]="CMS.Entries"
-  [Show]="CMS.Show"
-  [BaseElement]="CMS.BaseElement"
-  (entrySelect)="CMS.Close($event)"></wa-context-menu>
+
+  <wa-context-menu class="max-w-full md:max-w-sm" [Direction]="CMS.Direction" [Entries]="CMS.Entries" [Show]="CMS.Show"
+    [BaseElement]="CMS.BaseElement" (entrySelect)="CMS.Close($event)"></wa-context-menu>
 </div>

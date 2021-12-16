@@ -5,7 +5,7 @@
   <div class="max-h-0 overflow-hidden transition-all h-80 bg-wa-message-bar-light dark:bg-wa-message-bar-dark" 
         [ngClass]="{'!max-h-80': chatSymboOpen > 0}">    
     <!-- Emojis -->
-    <emoji-mart 
+    <!-- <emoji-mart 
     class="hidden"
     [ngClass]="{ '!block': chatSymboOpen === 1 }"
     set="apple" [style]="{ width: '100%' }"
@@ -15,10 +15,10 @@
     [categoriesIcons]="CategoriesIcons"
     [showPreview]="false" [hideObsolete]="false" notFoundEmoji="" 
     [showSingleCategory]="false" [virtualize]="true"
-    (emojiClick)="AddEmoji($event)"></emoji-mart>
+    (emojiClick)="AddEmoji($event)"></emoji-mart> -->
 
     <!-- GIFs -->
-    <!-- <div class="hidden flex-col" 
+    <div class="hidden flex-col" 
          [ngClass]="{ '!flex': chatSymboOpen === 2 }">
       <div class="flex text-center h-11 items-center text-sm font-medium relative
                 text-gray-400 dark:text-gray-500
@@ -45,7 +45,7 @@
       <div class="py-1.5 px-4">
         Gifs {{ selectedGifsTabIndex }}
       </div>
-    </div> -->
+    </div>
 
     <!-- Stickers -->
     <div class="hidden flex-col" 

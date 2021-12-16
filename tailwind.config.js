@@ -18,8 +18,10 @@ module.exports = {
         "wa-header": { "dark": "#2a2f32",  "light": "#ededed" }, // panel-header-background
         "wa-thumb": { "dark": "#394045",  "light": "#CCCCCC" },
         "wa-search": { "dark": "#323739",  "light": "#F6F6F6" },
+        "wa-sidemenu-header": { "dark": "#323739",  "light": "#00bfa5", "text-dark": "#e1e1e3", "text-light": "#ffffff" }, // panel-background-colored, drawer-header-title
         "wa-message-them": { "dark": "#262D31",  "light": "#FFFFFF" },
         "wa-message-me": { "dark": "#056162",  "light": "#DCF8C6" },
+        "wa-tab-marker": { "dark": "#00af9c",  "light": "#009688" },
         "wa-message-bar": { "dark": "#1e2428;",  "light": "#f0f0f0" }, // compose-panel-background
       },
       screens: {  
