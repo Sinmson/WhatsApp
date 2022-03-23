@@ -14,10 +14,10 @@ module.exports = {
     // new EnvironmentPlugin([
     //   // Insert the keys to your environment variables here.
     //   // Eg: APP_API_ENDPOINT="http://localhost:3000/api/v1"
-    //   'TENOR_APIR_KEY'
+    //   'TENOR_API_KEY'
     // ])
     new Dotenv({
-      path: './.env',
+      // path: './.env',
       safe: true,
       defaults: true,
       allowEmptyValues: true

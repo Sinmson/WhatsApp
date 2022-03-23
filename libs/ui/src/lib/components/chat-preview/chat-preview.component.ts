@@ -40,14 +40,14 @@ export class ChatPreviewComponent  {
   constructor(private contextMenuService: ContextMenuService) { }
 
   public OpenThisChat() {
-    console.log("ChatPanelComponent | OpenChat");
+    console.log("ChatPreviewComponent | OpenChat");
     this.OpenChat = { id: this.Id };
   }
 
   public async OpenContextMenu(e: Event) {
-    console.log("ChatPanelComponent (",this.Id,") | selectedIndex");
+    console.log("ChatPreviewComponent (",this.Id,") | selectedIndex");
     e.stopPropagation(); // To not trigger click of the chat preview div 
     const selectedIndex = await this.contextMenuService.Open(e.target as HTMLElement, this.ContextMenuEntries, "bottom right");
-    console.log("ChatPanelComponent (",this.Id,") | selectedIndex", selectedIndex);
+    console.log("ChatPreviewComponent (",this.Id,") | selectedIndex", selectedIndex);
   }
 }

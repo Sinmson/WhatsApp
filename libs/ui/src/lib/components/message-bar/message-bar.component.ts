@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, ViewEncapsulation } from '@angular/core';
 import { Emoji } from "@ctrl/ngx-emoji-mart/ngx-emoji";
-
+import { HttpClient } from '@angular/common/http';
+import { lastValueFrom } from "rxjs";
 
 @Component({
   selector: 'wa-message-bar',
@@ -11,15 +12,21 @@ import { Emoji } from "@ctrl/ngx-emoji-mart/ngx-emoji";
 })
 export class MessageBarComponent  {
 
-  chatSymboOpen = 0; // 0 nothing, 1 smileys, 2 gifs, 3 stickers
-  selectedGifsTabIndex = 0;
+  selectedGifsTabIndex = -1;
   selectedStickersTabIndex = 0;
+  gifs: any[] = [];
+  gifSearchTimeout = -1; 
+  chatSymboOpen = 0; // 0 nothing, 1 smileys, 2 gifs, 3 stickers
+  currentOpenChat: any = null;
+  messageToSend = "";
 
   @Input()
-  gifTabs = ["TRENDS", "HAHA", "TRAURIG", "LIEBE", "REAKTIONEN", "SPORT", "TV"];
+  gifTabs = ["HAHA", "TRAURIG", "LIEBE", "REAKTIONEN", "SPORT", "TV"];
+
 
   @Input()
   stickerTabs = ["LIEBE", "GRÜSSE", "GLÜCKLICH", "TRAURIG", "WÜTEND", "FEIERN"];
+
 
   public get CategoriesIcons() {
     return { 
@@ -45,7 +52,28 @@ export class MessageBarComponent  {
     }
   }
 
-  // constructor() { }
+  
+  @Input()  
+  public set openChat(val: any) {
+    if(val !== this.currentOpenChat) {
+      this.Init();
+    }
+    this.currentOpenChat = val;
+  }
+
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {
+    this.Init();
+  }
+
+  private Init() {
+    this.selectedGifsTabIndex = -1;
+    this.selectedStickersTabIndex = 0;
+    this.gifSearchTimeout = -1; 
+    this.chatSymboOpen = 0; // 0 nothing, 1 smileys, 2 gifs, 3 stickers
+    this.currentOpenChat = null;
+    this.messageToSend = "";
+    this.LoadTredingGifsFromApi();
+  }
 
 
   public OpenChatSymbols() {
@@ -58,6 +86,57 @@ export class MessageBarComponent  {
 
   public AddEmoji(emoji: Emoji) {
     console.log("AddEmoji | emoji", emoji);
+  }
+
+  public SelectGifsTabIndex(index: number) {
+    this.selectedGifsTabIndex = index;
+    if(index >= 0) {
+      this.LoadGifsFromApi(this.gifTabs[index]);
+    } else {
+      this.LoadTredingGifsFromApi();
+    }
+  }
+
+  // Todo: export to some service (?)
+  public async LoadGifsFromApi(tag: string) {
+    const key = process.env.TENOR_API_KEY;
+    const locale = navigator.language || "en";
+
+    this.gifs = [];
+
+    const response: any = await lastValueFrom(this.http.get(`https://g.tenor.com/v1/search?limit=50&key=${key}&locale=${locale}&contentfilter=high&q=${tag}`)) ;
+    console.log("LoadGifsFromApi | response", response);
+    if(response && response.results) {
+      this.gifs = response.results;
+    }
+    this.cdr.markForCheck();
+  }
+
+  public async LoadTredingGifsFromApi() {
+    const key = process.env.TENOR_API_KEY;
+    const locale = navigator.language || "en";
+
+    this.gifs = [];
+
+    const response: any = await lastValueFrom(this.http.get(`https://g.tenor.com/v1/trending?limit=50&key=${key}&locale=${locale}&contentfilter=high`)) ;
+    console.log("LoadGifsFromApi | response", response);
+    if(response && response.results) {
+      this.gifs = response.results;
+    }
+    this.cdr.markForCheck();
+  }
+
+  public HandleGifSearchInput(val: Event) {
+    const target = val.target as HTMLInputElement;
+    console.log("HandleGifSearchInput", val, target.value);
+
+    window.clearTimeout(this.gifSearchTimeout);
+
+    this.gifSearchTimeout = window.setTimeout( () => {
+      if(target?.value) {
+        this.LoadGifsFromApi(target.value);
+      }
+    }, 50);
   }
 
 }

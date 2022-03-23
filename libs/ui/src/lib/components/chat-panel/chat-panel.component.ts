@@ -25,7 +25,8 @@ export class ChatPanelComponent  {
   public get OpenChat() { return this.openChat; }
   public set OpenChat(val: any) { 
     console.log("ChatPanelComponent | OpenChat", val);
-    this.openChat =  val; this.openChatChange.emit(val); 
+    this.openChat =  val; 
+    this.openChatChange.emit(val); 
   }
   
 

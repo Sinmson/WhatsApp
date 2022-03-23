@@ -18,32 +18,43 @@
     (emojiClick)="AddEmoji($event)"></emoji-mart> -->
 
     <!-- GIFs -->
-    <div class="hidden flex-col" 
+    <div class="hidden flex-col h-full" 
          [ngClass]="{ '!flex': chatSymboOpen === 2 }">
-      <div class="flex text-center h-11 items-center text-sm font-medium relative
+      <div class="flex text-center h-11 items-center text-sm font-medium relative flex-none
                 text-gray-400 dark:text-gray-500
                 border-b-gray-600/10 dark:border-b-gray-500/10 border-b-2 symbol-tab-group"
                 >
         <span class="flex-1 cursor-pointer hover:text-gray-700 dark:hover:text-gray-300 px-1 overflow-hidden text-ellipsis whitespace-nowrap" 
+        (click)="SelectGifsTabIndex(-1)"
+        [ngClass]="{'text-gray-700 dark:text-gray-300': selectedGifsTabIndex === -1}"
+        title="Trends">
+          Trends
+        </span>      
+        <span class="flex-1 cursor-pointer hover:text-gray-700 dark:hover:text-gray-300 px-1 overflow-hidden text-ellipsis whitespace-nowrap" 
         *ngFor="let tabName of gifTabs; let i=index"
-        (click)="selectedGifsTabIndex = i"
+        (click)="SelectGifsTabIndex(i)"
         [ngClass]="{'text-gray-700 dark:text-gray-300': selectedGifsTabIndex === i}"
         [title]="tabName">
           {{ tabName }}
-        </span>      
+       </span>
         <span class="absolute bottom-0 left-0 h-1 translate-x-0 z-10 transition-all 
                    bg-wa-tab-marker-light dark:bg-wa-tab-marker-dark"
-              [style.width]="1 / gifTabs.length * 100 + '%'" [style.transform]="'translateX('  + (selectedGifsTabIndex * 100 + '%') + ')'">
+              [style.width]="1 / (gifTabs.length + 1) * 100 + '%'" [style.transform]="'translateX('  + ((selectedGifsTabIndex + 1) * 100 + '%') + ')'">
         </span>
       </div>
       <div class="py-1.5 px-3">
         <input type="text" 
                 class="py-2.5 px-3 rounded-md text-sm
-                    bg-wa-search-light dark:bg-wa-search-dark w-full" 
-                placeholder="GIFs bei Tenor suchen?">
+                    bg-wa-search-light dark:bg-wa-search-dark w-full
+                    text-gray-700 dark:text-gray-300" 
+                placeholder="GIFs bei Tenor suchen?"
+                (keyup)="HandleGifSearchInput($event)">
       </div>
-      <div class="py-1.5 px-4">
-        Gifs {{ selectedGifsTabIndex }}
+      <div class="py-1.5 px-4 flex flex-wrap gap-1 scroll-container overflow-auto">
+        <!-- Gifs {{ selectedGifsTabIndex }} {{ GifSrcs.length }} -->
+        <img *ngFor="let gif of gifs" [src]="gif.media[0].nanogif.url" 
+          class="cursor-pointer h-32 flex-1 max-w-[50%]" loading="lazy"
+          >
       </div>
     </div>
 
@@ -130,7 +141,9 @@
         </div>
       </div>
     </div>
-    <input type="text" placeholder="Schreib eine Nachricht" class="rounded-full mx-3 my-1 w-full bg-wa-chats-light dark:bg-wa-search-dark px-4 py-2 focus:border-0 outline-none text-sm dark:text-gray-200 text-gray-900 placeholder:text-gray-800/50 dark:placeholder:text-gray-300/50 flex-1">
+    <input type="text" placeholder="Schreib eine Nachricht" 
+          [(ngModel)]="messageToSend"
+          class="rounded-full mx-3 my-1 w-full bg-wa-chats-light dark:bg-wa-search-dark px-4 py-2 focus:border-0 outline-none text-sm dark:text-gray-200 text-gray-900 placeholder:text-gray-800/50 dark:placeholder:text-gray-300/50 flex-1">
     <!-- Microphone -->
     <button class="icon mx-1">
       <svg viewBox="0 0 24 24" width="24" height="24" class=""><path fill="currentColor" d="M11.999 14.942c2.001 0 3.531-1.53 3.531-3.531V4.35c0-2.001-1.53-3.531-3.531-3.531S8.469 2.35 8.469 4.35v7.061c0 2.001 1.53 3.531 3.53 3.531zm6.238-3.53c0 3.531-2.942 6.002-6.237 6.002s-6.237-2.471-6.237-6.002H3.761c0 4.001 3.178 7.297 7.061 7.885v3.884h2.354v-3.884c3.884-.588 7.061-3.884 7.061-7.885h-2z"></path></svg>

@@ -44,7 +44,7 @@ export class AppComponent {
 
   constructor(private http: HttpClient, private contextMenuService: ContextMenuService) {
     console.log("process.env", process.env);
-    console.log("process.env.TENOR_APIR_KEY", process.env.TENOR_APIR_KEY);
+    console.log("process.env.TENOR_API_KEY", process.env.TENOR_API_KEY);
   }
 
   public OpenSettings() {
