@@ -1,15 +1,37 @@
-<!-- Chat -->
 <div class="row-start-2 h-full bg-wa-header-light dark:bg-wa-header-dark flex">
+  <!-- Chat -->
   <div class="relative w-full h-full dark:bg-wa-chat-dark bg-wa-chat-light block" [ngClass]="{'sm:hidden': !OpenChat}">
     <div
       class=" absolute top-0 left-0 w-full h-full opacity-5 bg-[url(https://theabbie.github.io/blog/assets/official-whatsapp-background-image.jpg)] dark:invert">
     </div>
     <div class="h-full overflow-y-auto flex flex-col-reverse absolute top-0 left-0 w-full pb-2 scroll-container ">
-      <wa-chat-message *ngFor="let message of Messages; let i = index" [isMessageOfUser]="i % 2 === 0" [message]="message">
-      </wa-chat-message>
+      
+      <ng-container *ngFor="let entry of MessagesWithFilledDates; let i = index" >        
+        <ng-container *ngIf="entry.isMessage; else dateTemplate">
+          <wa-chat-message 
+          *ngIf="entry.isMessage"
+          [isMessageOfUser]="i % 2 === 0" 
+          [message]="entry.message.message" [date]="entry.message.date" [status]="entry.message.status">
+          </wa-chat-message> 
+        </ng-container>
+        <ng-template #dateTemplate>
+          <div class="mx-auto rounded-md px-3 py-1.5 mb-3
+                    text-gray-900 dark:text-gray-200 text-xs
+                    bg-wa-system-message-light dark:bg-wa-system-message-dark">
+            {{ entry.message.date | onDay }}
+          </div>
+        </ng-template>
+        
+        
+      </ng-container>
+      
+      
+      
       <div class="h-3 flex-none"></div>
     </div>
   </div>
+
+  <!-- No Chat Open -->
   <div class="text-gray-500 dark:text-gray-400 font-normal text-center m-auto w-4/5 max-w-xl hidden" [ngClass]="{'sm:block': !OpenChat}">
     <span class="hidden dark:flex justify-center items-center">
       <svg width="360" viewBox="0 0 303 172" fill="none" preserveAspectRatio="xMidYMid meet" class="">

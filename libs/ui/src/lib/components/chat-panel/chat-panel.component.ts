@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { I } from "@wa/models";
 
 @Component({
   selector: 'wa-chat-panel',
@@ -14,12 +15,12 @@ export class ChatPanelComponent  {
   @Output() 
   openChatChange = new EventEmitter<any>();
   
-  protected _Messages: string[] = [];
+  protected _Messages: I.ChatMessage[] = [];
   public get Messages() {     
     return this._Messages; 
   }
   @Input()
-  public set Messages(v: string[]) { this._Messages = v; }
+  public set Messages(v: I.ChatMessage[]) { this._Messages = v; }
 
   public get OpenChat() { return this.openChat; }
   public set OpenChat(val: any) { 

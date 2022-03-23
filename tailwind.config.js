@@ -23,6 +23,7 @@ module.exports = {
         "wa-message-me": { "dark": "#056162",  "light": "#DCF8C6" },
         "wa-tab-marker": { "dark": "#00af9c",  "light": "#009688" },
         "wa-message-bar": { "dark": "#1e2428;",  "light": "#f0f0f0" }, // compose-panel-background
+        "wa-system-message": { "dark": "#1e2a30;",  "light": "#e1f5fe" }, // system-message-background
       },
       screens: {  
       },

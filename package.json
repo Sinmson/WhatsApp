@@ -33,6 +33,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^13.1.0",
     "@angular-devkit/build-angular": "~13.0.0",
     "@angular-eslint/eslint-plugin": "~12.6.0",
     "@angular-eslint/eslint-plugin-template": "~12.6.0",
@@ -66,6 +67,7 @@
     "@typescript-eslint/parser": "~4.33.0",
     "cypress": "^8.3.0",
     "cypress-storybook": "^0.5.1",
+    "dotenv-webpack": "^7.1.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",

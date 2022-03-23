@@ -42,7 +42,10 @@ export class AppComponent {
 
   public get CMS() { return this.contextMenuService; }
 
-  constructor(private http: HttpClient, private contextMenuService: ContextMenuService) {}
+  constructor(private http: HttpClient, private contextMenuService: ContextMenuService) {
+    console.log("process.env", process.env);
+    console.log("process.env.TENOR_APIR_KEY", process.env.TENOR_APIR_KEY);
+  }
 
   public OpenSettings() {
     this.isSettingsPanelOpen = true;

@@ -15,8 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@whatsapp/ui": ["libs/ui/src/index.ts"],
-      "@whatsapp/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@wa/models": ["libs/models/src/index.ts"],
+      "@whatsapp/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@whatsapp/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

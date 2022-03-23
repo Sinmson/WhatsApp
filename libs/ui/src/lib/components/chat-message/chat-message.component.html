@@ -1,7 +1,8 @@
 <div class="mx-[9%] mb-3 flex text-gray-900 dark:text-gray-200">
 
   <div class="p-2 rounded-lg max-w-[65%] break-words whitespace-pre-wrap relative text-inherit text-sm"
-    [ngClass]="{'dark:bg-wa-message-them-dark bg-wa-message-them-light mr-auto rounded-tl-none': !isMessageOfUser, 'dark:bg-wa-message-me-dark bg-wa-message-me-light ml-auto rounded-tr-none': isMessageOfUser}">
+    [ngClass]="{'dark:bg-wa-message-them-dark bg-wa-message-them-light mr-auto rounded-tl-none': !isMessageOfUser, 
+                'dark:bg-wa-message-me-dark bg-wa-message-me-light ml-auto rounded-tr-none': isMessageOfUser}">
     <span class="absolute top-0 -right-2" *ngIf="isMessageOfUser">
       <svg viewBox="0 0 8 13" width="8" height="13" class="dark:fill-wa-message-me-dark fill-wa-message-me-light">
         <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
@@ -14,8 +15,7 @@
         <path fill="inherit" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path>
       </svg>
     </span>
-    <div class="text-inherit relative group">
-
+    <div class="text-inherit relative group bg-inherit">
       <span *ngIf="WasDeleted" class="text-gray-600 dark:text-gray-300/70 italic inline-flex items-center select-text">
         <svg viewBox="0 0 24 24" fill="currentColor" class="inline-block w-6 h-6"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.759 6.43a7 7 0 0 1 9.81 9.81l-9.81-9.81zM6.357 7.858a7 7 0 0 0 9.786 9.786L6.357 7.857zM12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z" fill="currentColor"></path></svg>
         Diese Nachricht wurde gelöscht.
@@ -29,10 +29,15 @@
                   group-hover:opacity-100 group-hover:translate-x-0
                   absolute right-0 top-0 text-right flex z-20             
                   before:w-5 before:inline-block
-                  before:shadow-2xl before:shadow-wa-message-me-light before:dark:shadow-wa-message-me-dark
-                  before:rounded-bl-full before:bg-gradient-to-bl before:from-wa-message-me-light before:dark:from-wa-message-me-dark before:to-wa-message-me-light/10 before:dark:to-wa-message-me-dark/10"
+                  before:shadow-2xl before:rounded-bl-full before:bg-gradient-to-bl"
+                  [ngClass]="{'after:dark:bg-wa-message-them-dark after:bg-wa-message-them-light after:dark:shadow-wa-message-them-dark after:shadow-wa-message-them-light': !isMessageOfUser, 
+                              'after:dark:bg-wa-message-me-dark after:bg-wa-message-me-light after:dark:shadow-wa-message-me-dark after:shadow-wa-message-me-light': isMessageOfUser}"
                   (click)="OpenContextMenu($event)">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="ml-auto w-5 h-5 bg-wa-message-me-light dark:bg-wa-message-me-dark " viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" 
+            class="ml-auto w-5 h-5 bg-inherit " 
+            [ngClass]="{'dark:bg-wa-message-them-dark bg-wa-message-them-light': !isMessageOfUser, 
+                        'dark:bg-wa-message-me-dark bg-wa-message-me-light': isMessageOfUser}"
+            viewBox="0 0 16 16">
           <path fill-rule="evenodd"
             d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
         </svg>

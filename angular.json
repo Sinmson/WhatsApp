@@ -16,6 +16,32 @@
       },
       "tags": []
     },
+    "models": {
+      "projectType": "library",
+      "root": "libs/models",
+      "sourceRoot": "libs/models/src",
+      "prefix": "wa",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models"],
+          "options": {
+            "jestConfig": "libs/models/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/models/src/**/*.ts",
+              "libs/models/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "ui": {
       "projectType": "library",
       "root": "libs/ui",
@@ -37,16 +63,14 @@
           }
         },
         "storybook": {
-          "builder": "@nrwl/storybook:storybook",  
+          "builder": "@nrwl/storybook:storybook",
           "options": {
             "uiFramework": "@storybook/angular",
             "port": 4400,
             "config": {
               "configFolder": "libs/ui/.storybook"
             },
-            "styles": [
-              "node_modules/@ctrl/ngx-emoji-mart/picker.css"
-            ]
+            "styles": ["node_modules/@ctrl/ngx-emoji-mart/picker.css"]
           },
           "configurations": {
             "ci": {
@@ -72,9 +96,7 @@
         }
       },
       "tags": [],
-      "schematics": {
-        
-      }
+      "schematics": {}
     },
     "ui-e2e": {
       "root": "apps/ui-e2e",
@@ -111,7 +133,7 @@
       "prefix": "wa",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/whats-app",
@@ -125,7 +147,10 @@
               "apps/whats-app/src/assets"
             ],
             "styles": ["apps/whats-app/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+               "path": "custom-webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -161,20 +186,21 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "whats-app:build:production"
             },
             "development": {
-              "browserTarget": "whats-app:build:development"              
+              "browserTarget": "whats-app:build:development"
             }
           },
           "defaultConfiguration": "development",
           "options": {
             "proxyConfig": "apps/whats-app/proxy.conf.json",
             "port": 4200,
-            "disableHostCheck": true
+            "disableHostCheck": true,
+            "browserTarget": "whats-app:build"
           }
         },
         "extract-i18n": {
@@ -233,9 +259,7 @@
         }
       },
       "tags": [],
-      "schematics": {
-        
-      }
+      "schematics": {}
     },
     "whats-app-e2e": {
       "root": "apps/whats-app-e2e",

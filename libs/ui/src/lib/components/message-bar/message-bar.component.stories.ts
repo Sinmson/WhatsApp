@@ -1,6 +1,6 @@
 import { EmojiModule } from "@ctrl/ngx-emoji-mart/ngx-emoji";
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
-import { UiModule } from "../ui.module";
+import { UiModule } from "../../ui.module";
 import { MessageBarComponent } from './message-bar.component';
 
 export default {
