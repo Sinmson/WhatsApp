@@ -1,6 +1,6 @@
 <footer class="bg-wa-message-bar-light dark:bg-wa-message-bar-dark w-full 
               select-none text-gray-600 dark:text-gray-500
-              flex flex-col chat-message-bar overflow-x-hidden">
+              flex flex-col chat-message-bar ">
   <!-- Hiden Box to select emojis, gifs and stickers, TODO: Pass color variable -->
   <div class="max-h-0 overflow-hidden transition-all h-80 bg-wa-message-bar-light dark:bg-wa-message-bar-dark" 
         [ngClass]="{'!max-h-80': chatSymboOpen > 0}">    
@@ -50,7 +50,7 @@
                 placeholder="GIFs bei Tenor suchen?"
                 (keyup)="HandleGifSearchInput($event)">
       </div>
-      <div class="py-1.5 px-4 flex flex-wrap gap-1 scroll-container overflow-auto">
+      <div class="py-1.5 px-4 flex flex-wrap gap-1 scroll-container">
         <!-- Gifs {{ selectedGifsTabIndex }} {{ GifSrcs.length }} -->
         <img *ngFor="let gif of gifs" [src]="gif.media[0].nanogif.url" 
           class="cursor-pointer h-32 flex-1 max-w-[50%]" loading="lazy"
